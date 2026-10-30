@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff8f5">
+    <title>❤️‍🔥</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+        :root {
+            --ink: #382a2d;
+            --muted: #806d70;
+            --rose: #d43b42;
+            --pale: #fff7f2;
+            --line: #efdeda
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: var(--pale);
+            color: var(--ink);
+            font-family: 'DM Sans', sans-serif
+        }
+
+        .hero {
+            min-height: 94vh;
+            display: grid;
+            place-items: center;
+            padding: 50px 24px;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(ellipse at 18% 25%, #ffd8cb 0, transparent 28%), radial-gradient(ellipse at 84% 76%, #ffe0cc 0, transparent 31%), var(--pale)
+        }
+
+        .hero:before,
+        .hero:after {
+            content: '♡';
+            position: absolute;
+            color: #d8909d66;
+            font-size: 180px
+        }
+
+        .hero:before {
+            left: 4%;
+            top: 5%;
+            transform: rotate(-18deg)
+        }
+
+        .hero:after {
+            right: 5%;
+            bottom: 1%;
+            transform: rotate(15deg)
+        }
+
+        .intro {
+            max-width: 850px;
+            text-align: center;
+            position: relative;
+            z-index: 1
+        }
+
+        .eyebrow {
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--rose);
+            font-size: .75rem;
+            font-weight: 700
+        }
+
+        .intro h1 {
+            font: 600 clamp(3rem, 8vw, 6.7rem)/1.04 'Playfair Display', serif;
+            margin: 20px 0
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            color: var(--muted);
+            max-width: 590px;
+            margin: 0 auto 30px;
+            line-height: 1.8
+        }
+
+        .pill {
+            display: inline-block;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 99px;
+            padding: 11px 18px;
+            color: var(--rose);
+            font-size: .9rem
+        }
+
+        .down {
+            display: block;
+            color: var(--rose);
+            text-decoration: none;
+            margin-top: 42px;
+            font-size: .9rem
+        }
+
+        .wrap {
+            width: min(1000px, calc(100% - 36px));
+            margin: auto
+        }
+
+        .story {
+            padding: 90px 0 70px
+        }
+
+        .section-title {
+            text-align: center;
+            font: 600 clamp(2rem, 5vw, 3.4rem)/1.15 'Playfair Display', serif;
+            margin: 0 0 14px
+        }
+
+        .sub {
+            text-align: center;
+            color: var(--muted);
+            line-height: 1.8;
+            max-width: 650px;
+            margin: 0 auto 44px
+        }
+
+        .letter {
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 26px;
+            padding: clamp(24px, 6vw, 54px);
+            box-shadow: 0 18px 60px #703c4310;
+            font: 1.08rem/1.95 'Playfair Display', serif
+        }
+
+        .letter p {
+            margin: 0 0 18px
+        }
+
+        .letter p:last-child {
+            margin-bottom: 0
+        }
+
+        .gallery {
+            padding: 40px 0 90px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px
+        }
+
+        .photo {
+            margin: 0;
+            overflow: hidden;
+            border-radius: 18px;
+            background: #f3e1df;
+            aspect-ratio: 4/5;
+            box-shadow: 0 10px 24px #572f3614
+        }
+
+        .photo:nth-child(2),
+        .photo:nth-child(5) {
+            transform: translateY(18px)
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .45s
+        }
+
+        .photo:hover img {
+            transform: scale(1.045)
+        }
+
+        .question {
+            padding: 90px 20px 105px;
+            text-align: center;
+            background: #ffe2d5
+        }
+
+        .question h2 {
+            font: 600 clamp(2.5rem, 7vw, 5rem)/1.08 'Playfair Display', serif;
+            margin: 14px auto;
+            max-width: 800px
+        }
+
+        .question p {
+            color: var(--muted);
+            line-height: 1.8
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 28px
+        }
+
+        .btn {
+            border: 0;
+            padding: 15px 26px;
+            border-radius: 99px;
+            font: 600 1rem 'DM Sans', sans-serif;
+            cursor: pointer;
+            transition: transform .2s, box-shadow .2s
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 9px 22px #8f435326
+        }
+
+        .yes {
+            background: var(--rose);
+            color: white
+        }
+
+        .think {
+            background: #fff;
+            color: var(--ink);
+            border: 1px solid var(--line)
+        }
+
+        #answer {
+            min-height: 35px;
+            margin: 24px auto 0;
+            color: var(--rose);
+            font: 600 1.2rem 'Playfair Display', serif
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--muted);
+            font-size: .85rem
+        }
+
+        .heart {
+            color: var(--rose)
+        }
+
+        @media(max-width:700px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px
+            }
+
+            .photo:nth-child(2),
+            .photo:nth-child(5) {
+                transform: none
+            }
+
+            .hero {
+                min-height: 86vh
+            }
+
+            .hero:before,
+            .hero:after {
+                font-size: 100px
+            }
+        }
+    /* Cinemática de aceptación */
+#cinema{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:24px;background:radial-gradient(circle at center,#7d1828 0%,#250a19 100%);color:#fff;text-align:center;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .55s ease,visibility .55s ease}
+#cinema.show{opacity:1;visibility:visible;pointer-events:auto}
+#cinema .cinema-card{width:min(720px,100%);transform:scale(.82);transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+#cinema.show .cinema-card{transform:scale(1)}
+#cinema h2{font:600 clamp(2.4rem,8vw,5rem)/1.1 'Playfair Display',serif;color:#fff;margin:12px 0}
+#cinema p{font-size:1.1rem;line-height:1.8;color:#ffe5df}
+#cinema .cinema-close{border:1px solid #ffffff80;background:#ffffff18;color:#fff;border-radius:99px;padding:13px 22px;margin-top:14px;cursor:pointer;font:600 .95rem 'DM Sans',sans-serif}
+.burst{position:fixed;z-index:10000;pointer-events:none;animation:cinema-burst 1.9s ease-out forwards;font-size:28px}
+@keyframes cinema-burst{0%{transform:translate(0,0) scale(.4) rotate(0);opacity:0}12%{opacity:1}100%{transform:translate(var(--x),var(--y)) scale(1.4) rotate(250deg);opacity:0}}/* Transiciones suaves entre secciones */
+body{animation:page-enter .9s ease both}
+@keyframes page-enter{from{opacity:0}to{opacity:1}}
+.story,.gallery,.question,.footer{opacity:0;transform:translateY(28px);transition:opacity .85s ease,transform .85s cubic-bezier(.2,.75,.25,1)}
+.story.in-view,.gallery.in-view,.question.in-view,.footer.in-view{opacity:1;transform:translateY(0)}
+.photo{transition:transform .55s cubic-bezier(.2,.75,.25,1),box-shadow .55s,opacity .7s}
+.grid .photo{opacity:0;transform:translateY(20px) scale(.98)}
+.grid.in-view .photo{opacity:1;transform:translateY(0) scale(1)}
+.grid.in-view .photo:nth-child(2){transition-delay:.07s}.grid.in-view .photo:nth-child(3){transition-delay:.14s}.grid.in-view .photo:nth-child(4){transition-delay:.21s}.grid.in-view .photo:nth-child(5){transition-delay:.28s}.grid.in-view .photo:nth-child(6){transition-delay:.35s}.grid.in-view .photo:nth-child(7){transition-delay:.42s}.grid.in-view .photo:nth-child(8){transition-delay:.49s}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.story,.gallery,.question,.footer,.grid .photo{opacity:1;transform:none}}/* Navegación tipo presentación */
+html{scroll-snap-type:y mandatory;scroll-padding-top:0}
+.hero,.story,.gallery,.question{min-height:100svh;scroll-snap-align:start;scroll-snap-stop:always}
+.story,.gallery{display:flex;flex-direction:column;justify-content:center}
+.gallery .grid{width:100%;max-height:52svh;grid-template-rows:repeat(2,minmax(0,1fr));grid-auto-rows:minmax(0,1fr)}
+.gallery .photo{height:100%;min-height:0;aspect-ratio:auto}
+.slide-nav{position:fixed;z-index:6;right:22px;bottom:22px;display:flex;align-items:center;gap:10px;padding:9px 12px;border:1px solid #efdeda;background:#fffdfbf2;backdrop-filter:blur(10px);border-radius:99px;box-shadow:0 8px 24px #703c4320}
+.slide-nav button{width:40px;height:40px;border:0;border-radius:50%;background:var(--rose);color:#fff;font-size:1.15rem;cursor:pointer;transition:transform .2s,opacity .2s}
+.slide-nav button:hover{transform:scale(1.08)}.slide-nav button:disabled{opacity:.35;cursor:default;transform:none}
+#slide-count{min-width:42px;text-align:center;color:var(--ink);font-size:.85rem;font-weight:700}
+@media(max-width:700px){.gallery .grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;max-height:48svh}.gallery .photo{height:22svh}.gallery .photo:nth-child(2),.gallery .photo:nth-child(5){transform:none}.slide-nav{right:12px;bottom:12px}.story{padding:56px 0 90px}.story .letter{font-size:.98rem;line-height:1.65}.story .sub,.gallery .sub{margin-bottom:22px}}/* Efecto de hoja al cambiar de diapositiva */
+.hero,.story,.gallery,.question{transform-style:preserve-3d;backface-visibility:hidden}
+.turn-next{animation:book-turn-next .72s cubic-bezier(.2,.75,.25,1)}
+.turn-prev{animation:book-turn-prev .72s cubic-bezier(.2,.75,.25,1)}
+@keyframes book-turn-next{0%{transform:perspective(1400px) rotateY(-11deg) translateX(24px);opacity:.35;filter:brightness(.86)}65%{transform:perspective(1400px) rotateY(2deg);opacity:1;filter:brightness(1)}100%{transform:none;opacity:1;filter:none}}
+@keyframes book-turn-prev{0%{transform:perspective(1400px) rotateY(11deg) translateX(-24px);opacity:.35;filter:brightness(.86)}65%{transform:perspective(1400px) rotateY(-2deg);opacity:1;filter:brightness(1)}100%{transform:none;opacity:1;filter:none}}
+@media(prefers-reduced-motion:reduce){.turn-next,.turn-prev{animation:none}}/* Mantener visible el control de música junto al de diapositivas */
+.music-control{left:22px;right:auto;bottom:22px;z-index:7}
+@media(max-width:700px){.music-control{left:12px;bottom:12px}}/* Controles fijos y accesibles */
+.music-control{position:fixed!important;left:20px!important;right:auto!important;bottom:20px!important;top:auto!important;z-index:10001!important;display:inline-flex;align-items:center;justify-content:center;padding:13px 19px!important;border:0!important;border-radius:999px!important;background:#d43b42!important;color:#fff!important;font:600 .95rem 'DM Sans',sans-serif!important;box-shadow:0 8px 24px #9b263544!important;cursor:pointer!important;pointer-events:auto!important}
+.slide-nav{position:fixed!important;right:20px!important;bottom:20px!important;z-index:10001!important;display:flex!important;align-items:center;gap:10px;padding:9px 12px;border:1px solid #efdeda;background:#fffdfbf2;border-radius:99px;box-shadow:0 8px 24px #703c4320;pointer-events:auto}
+.slide-nav button{width:42px;height:42px;border:0;border-radius:50%;background:#d43b42;color:white;font-size:1.2rem;cursor:pointer;pointer-events:auto}.slide-nav button:disabled{opacity:.4;cursor:default}#slide-count{min-width:42px;text-align:center;font-weight:700}
+@media(max-width:700px){.music-control{left:12px!important;bottom:12px!important;padding:11px 14px!important}.slide-nav{right:12px!important;bottom:12px!important}}</style>
+</head>
+
+<body>
+    <audio id="bg-music" src="./recuerdos/musica.mp3" loop preload="none"></audio><button class="music-control"
+        id="music-button" type="button" aria-label="Reproducir música">♫ Reproducir música</button>
+    <header class="hero">
+        <div class="intro"><span class="eyebrow">Para mi ❤️‍🔥𝓢𝓸𝓷𝓻𝓲𝓼𝓲𝓽𝓪❤️‍🔥</span>
+            <h1>Dos meses<br>contigo, Sonrisita</h1>
+            <p>Hay momentos que se vuelven favoritos sin que uno se dé cuenta 🥰. Estos dos meses contigo se han llenado
+                de recuerdos que quiero guardar cerquita 📸❤️‍🔥.</p><span class="pill">Una pequeña historia, hecha con
+                mucho cariño 💌✨</span><a class="down" href="#historia">Sigue leyendo ↓</a>
+        </div>
+    </header>
+    <main id="historia">
+        <section class="story wrap">
+            <h2 class="section-title">Lo que hemos vivido</h2>
+            <p class="sub">No necesito que todo sea perfecto 🌷. Me basta con que cada momento a tu lado se sienta tan
+                bonito y tan nuestro 🫶🏽💖.</p>
+            <article class="letter">
+                <p>En estos dos meses hemos compartido abrazos 🤗, risas 😄, miradas 🥰 y esos ratitos en los que el
+                    mundo parece quedarse quieto cuando estamos juntos ✨. Cada foto guarda un pedacito de lo que hemos
+                    ido construyendo 📸❤️.</p>
+                <p>Me gusta tenerte cerca 🫶🏽, la confianza que hemos ido creando y la forma en que hasta los momentos
+                    sencillos se vuelven especiales contigo 🌟. Gracias por cada cariño 💕, cada sonrisa 😊 y por hacer
+                    espacio para mí en tu vida.</p>
+                <p>En poco tiempo te has vuelto alguien muy importante para mí ❤️. No sé exactamente qué traerá el
+                    futuro, pero sí sé que me ilusiona seguir conociéndote, cuidando esto tan lindo 🌹 y sumando muchos
+                    recuerdos más, paso a paso y juntos 👫✨.</p>
+                <p>Por eso hoy quiero preguntarte algo que llevo en el corazón… 💌❤️‍🔥</p>
+            </article>
+        </section>
+        <section class="gallery wrap">
+            <h2 class="section-title">Nuestros recuerdos</h2>
+            <p class="sub">Ocho pedacitos de estos dos meses que me hacen sonreír 🥰📷.</p>
+            <div class="grid">
+                <figure class="photo"><img src="recuerdos/foto-1.jpeg" alt="Un recuerdo juntos" loading="lazy"></figure>
+                <figure class="photo"><img src="recuerdos/foto-2.jpeg" alt="Un momento compartido" loading="lazy">
+                </figure>
+                <figure class="photo"><img src="recuerdos/foto-3.jpeg" alt="Un recuerdo especial" loading="lazy">
+                </figure>
+                <figure class="photo"><img src="recuerdos/foto-4.jpeg" alt="Una mirada que guardo" loading="lazy">
+                </figure>
+                <figure class="photo"><img src="recuerdos/foto-5.jpeg" alt="Un ratito juntos" loading="lazy"></figure>
+                <figure class="photo"><img src="recuerdos/foto-6.jpeg" alt="Un recuerdo de nosotros" loading="lazy">
+                </figure>
+                <figure class="photo"><img src="recuerdos/foto-7.jpeg" alt="Un momento cerquita" loading="lazy">
+                </figure>
+                <figure class="photo"><img src="recuerdos/foto-8.jpeg" alt="Un instante para recordar" loading="lazy">
+                </figure>
+            </div>
+        </section>
+        <section class="question"><span class="eyebrow">Y ahora sí…</span>
+            <h2>¿Quieres ser mi novia?</h2>
+            <p>Me haría muy feliz seguir escribiendo esta historia contigo 🥹💞. Sin presión: quiero que respondas con
+                el corazón ❤️.</p>
+            <div class="buttons"><button class="btn yes" id="yes-button" type="button">Sí, quiero 💖</button><button class="btn think" id="think-button" type="button">Quiero pensarlo 🤔</button></div>
+<div id="answer" aria-live="polite"></div>
+        </section>
+    </main>
+    <footer class="footer">Hecho con cariño, para ti, Sonrisita <span class="heart">♥</span></footer>
+    <script>const track = document.getElementById("bg-music"); const musicButton = document.getElementById("music-button"); musicButton.addEventListener("click", async () => {if (track.paused) {try {await track.play(); musicButton.textContent = "♫ Pausar música"; musicButton.setAttribute("aria-label", "Pausar música")} catch (e) {musicButton.textContent = "No se encontró musica.mp3"} } else {track.pause(); musicButton.textContent = "♫ Reproducir música"; musicButton.setAttribute("aria-label", "Reproducir música")} });</script>
+<div class="cinema" id="cinema" role="dialog" aria-modal="true" aria-labelledby="cinema-title"><div class="cinema-card"><div style="font-size:4rem">❤️‍🔥</div><h2 id="cinema-title">¡Me hiciste muy feliz!</h2><p>Entonces que esta historia siga llenándose de abrazos, risas y recuerdos bonitos. Gracias por decir que sí, Sonrisita 🥹💖✨</p><button class="cinema-close" id="close-cinema">Volver a nuestros recuerdos</button></div></div>
+<script>
+const answer=document.getElementById("answer"),think=document.getElementById("think-button"),yes=document.getElementById("yes-button"),cinema=document.getElementById("cinema");let thinkCount=0;const jokes=["¿Segura? 🥺 Piénsalo con esa carita bonita…","¿Segurísima? 😅 Todavía acepto un sí con abrazo incluido 💞","Última oportunidad para dejarme sonriendo todo el día 😳❤️"];
+let isDodging=false;
+const dodge=()=>{think.style.position="fixed";think.style.zIndex="8";think.style.transition="left .18s ease, top .18s ease";const maxX=Math.max(12,innerWidth-think.offsetWidth-12),maxY=Math.max(12,innerHeight-think.offsetHeight-12);think.style.left=Math.round(Math.random()*maxX)+"px";think.style.top=Math.round(Math.random()*maxY)+"px"};
+think.addEventListener("click",()=>{if(isDodging){dodge();return}thinkCount++;if(thinkCount<4){answer.textContent=jokes[thinkCount-1]}else{isDodging=true;answer.textContent="¡Ya van cuatro! 😂 Ahora tendrás que atrapar el botón para pensarlo… ❤️‍🔥";dodge();think.addEventListener("pointerenter",dodge)}});yes.addEventListener("click",()=>{cinema.classList.add("show");for(let i=0;i<34;i++){const heart=document.createElement("span");heart.className="burst";heart.textContent=["💖","❤️","✨","❤️‍🔥","💕"][i%5];heart.style.left="50%";heart.style.top="50%";heart.style.setProperty("--x",(Math.random()*innerWidth-innerWidth/2)+"px");heart.style.setProperty("--y",(Math.random()*innerHeight-innerHeight/2)+"px");document.body.appendChild(heart);setTimeout(()=>heart.remove(),2000)}});document.getElementById("close-cinema").addEventListener("click",()=>cinema.classList.remove("show"));
+</script><script>
+const revealTargets=document.querySelectorAll(".story,.gallery,.question,.footer,.grid");
+if("IntersectionObserver" in window){const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("in-view");revealObserver.unobserve(entry.target)}}),{threshold:.12});revealTargets.forEach(item=>revealObserver.observe(item))}else{revealTargets.forEach(item=>item.classList.add("in-view"))}
+</script><nav class="slide-nav" aria-label="Navegación de diapositivas"><button id="previous-slide" type="button" aria-label="Diapositiva anterior">←</button><span id="slide-count" aria-live="polite">1 / 4</span><button id="next-slide" type="button" aria-label="Siguiente diapositiva">→</button></nav>
+<script>
+const slides=[document.querySelector(".hero"),document.querySelector(".story"),document.querySelector(".gallery"),document.querySelector(".question")];
+const prevSlide=document.getElementById("previous-slide"),nextSlide=document.getElementById("next-slide"),slideCount=document.getElementById("slide-count");let activeSlide=0;
+function showSlide(index){activeSlide=Math.max(0,Math.min(slides.length-1,index));slides[activeSlide].scrollIntoView({behavior:"smooth",block:"start"});slideCount.textContent=(activeSlide+1)+" / "+slides.length;prevSlide.disabled=activeSlide===0;nextSlide.disabled=activeSlide===slides.length-1}
+prevSlide.addEventListener("click",()=>showSlide(activeSlide-1));nextSlide.addEventListener("click",()=>showSlide(activeSlide+1));
+let hasEnteredFirstSlide=false;const slideObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){const incoming=slides.indexOf(entry.target);if(hasEnteredFirstSlide&&incoming!==activeSlide){const page=entry.target;page.classList.remove("turn-next","turn-prev");void page.offsetWidth;page.classList.add(incoming>activeSlide?"turn-next":"turn-prev");setTimeout(()=>page.classList.remove("turn-next","turn-prev"),760)}activeSlide=incoming;hasEnteredFirstSlide=true;slideCount.textContent=(activeSlide+1)+" / "+slides.length;prevSlide.disabled=activeSlide===0;nextSlide.disabled=activeSlide===slides.length-1}}),{threshold:.55});slides.forEach(slide=>slideObserver.observe(slide));
+document.addEventListener("keydown",event=>{if(event.key==="ArrowRight"||event.key==="PageDown"){event.preventDefault();showSlide(activeSlide+1)}if(event.key==="ArrowLeft"||event.key==="PageUp"){event.preventDefault();showSlide(activeSlide-1)}});
+</script></body>
+
+</html>
+
+
+
+
+
+
+
+
+
